@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:theme="@style/ThemeOverlay.QuizApp.FullscreenContainer"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/dummy_content"
+        android:textColor="?attr/fullscreenTextColor"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/fullscreen_content_controls"
+            style="@style/Widget.Theme.QuizApp.ButtonBar.Fullscreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_vertical"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+<!--            changed two things from horizontal to vertical above-->
+
+<!--            android:layout_height="match_parent"-->
+<!--                android:paddingBottom="16dp"-->
+<!--                android:paddingTop="16dp"-->
+<!--                android:paddingLeft="16dp"-->
+<!--                android:paddingRight="16dp"-->
+<!--                android:orientation="vertical"-->
+<!--                tools:context=".MainActivity">-->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/ic_launcher_foreground"
+                android:layout_marginBottom="20dp">.</ImageView>
+<!--            change background to a reference to a city picture-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Guess the city in the image above"
+                android:textAlignment="center"
+                android:layout_marginBottom="20px"></TextView>
+            <Button
+                android:id="@+id/choice1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="New York"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:background="#0091EA"
+                android:textColor="#FFF"
+                android:layout_marginBottom="15dp"
+                />
+            <Button
+                android:id="@+id/choice2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="St. Louis"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:background="#0091EA"
+                android:textColor="#FFF"
+                android:layout_marginBottom="15dp"
+                />
+            <Button
+                android:id="@+id/choice3"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="Toronto"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:background="#0091EA"
+                android:textColor="#FFF"
+                android:layout_marginBottom="15dp"
+                />
+
+
+
+
+
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
